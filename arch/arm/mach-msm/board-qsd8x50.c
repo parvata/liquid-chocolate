@@ -2026,16 +2026,16 @@ static struct i2c_board_info msm_i2c_board_info[] __initdata = {
 		.irq = MSM_GPIO_TO_INT(145),
 	},
 #endif
-//#if defined(CONFIG_BOSCH_SMB380)
+#if defined(CONFIG_BOSCH_SMB380)
 	{
 		I2C_BOARD_INFO("smb380", 0x38),
-		//.irq           =  MSM_GPIO_TO_INT(22),
+		.irq           =  MSM_GPIO_TO_INT(22),
 	},
-//#endif //defined(CONFIG_BOSCH_SMB380)
+#endif //defined(CONFIG_BOSCH_SMB380)
 	{
-                I2C_BOARD_INFO("yas529", 0x2e),
-                .platform_data = &yas529_pdata,
-        },
+		I2C_BOARD_INFO("yas529", 0x2e),
+		.platform_data = &yas529_pdata,
+	},
 #if defined(CONFIG_SENSORS_ISL29018)
 	{
 		I2C_BOARD_INFO("isl29018", 0x44),

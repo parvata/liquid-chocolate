@@ -186,6 +186,7 @@ static int tpa2018_remove(struct i2c_client *client)
 {
 	ACER_DBG("remove tpa2018\n");
 	gpio_free(SPK_AMP_EN);
+	unregister_early_suspend(&tpa2018_data.early_suspend);
 	return 0;
 }
 
